@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Factures Thy</title>
+<meta name="description" content="Application de facturation locale pour prothésiste ongulaire indépendante" />
+
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#b4788c" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Factures Thy" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="icon" href="icons/icon-192.png" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+<header class="app-header">
+  <div class="app-header-inner">
+    <span class="app-logo">💅 Factures Thy</span>
+  </div>
+</header>
+
+<main id="app" class="app-main"></main>
+
+<nav class="bottom-nav" id="bottom-nav">
+  <a href="#/" class="nav-item" data-route="/">
+    <span class="nav-icon">🏠</span><span>Accueil</span>
+  </a>
+  <a href="#/invoices" class="nav-item" data-route="/invoices">
+    <span class="nav-icon">🧾</span><span>Factures</span>
+  </a>
+  <a href="#/invoices/new" class="nav-item nav-item-highlight" data-route="/invoices/new">
+    <span class="nav-icon">➕</span><span>Nouvelle</span>
+  </a>
+  <a href="#/clients" class="nav-item" data-route="/clients">
+    <span class="nav-icon">👥</span><span>Clientes</span>
+  </a>
+  <a href="#/settings" class="nav-item" data-route="/settings">
+    <span class="nav-icon">⚙️</span><span>Réglages</span>
+  </a>
+</nav>
+
+<script src="js/vendor/jspdf.umd.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
