@@ -11,21 +11,21 @@ ni aucun compte Apple Developer.
 4. Cliquez sur **Save**.
 5. Après quelques minutes, GitHub affiche l'adresse de l'application,
    généralement de la forme :
-   `https://VOTRE-COMPTE.github.io/factures-thy/`
+   `https://VOTRE-COMPTE.github.io/factures/`
 
 > **Important — dépôt privé et GitHub Pages** : un dépôt privé sur un compte
 > GitHub gratuit peut publier un site avec GitHub Pages, mais ce site reste
 > **public à quiconque connaît l'adresse** (GitHub Pages ne restreint pas
 > l'accès selon la visibilité du dépôt sur les comptes gratuits). Cela ne
 > pose pas de problème de confidentialité ici puisque l'application ne
-> contient et n'affiche aucune donnée cliente : les données de Thy restent
+> contient et n'affiche aucune donnée cliente : les données restent
 > uniquement sur son téléphone. Le code source, lui, reste privé et n'est
 > visible que par les personnes ayant accès au dépôt.
 
-## 2. Vérifier
+## 4. Vérifier
 
 Ouvrez l'adresse GitHub Pages dans un navigateur : l'application doit
-s'afficher. C'est cette adresse que Thy utilisera pour installer
+s'afficher. C'est cette adresse que le user utilisera pour installer
 l'application sur son iPhone (voir [INSTALLATION.md](INSTALLATION.md)).
 
 ## Mises à jour ultérieures

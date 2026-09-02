@@ -6,12 +6,12 @@ import { navigate } from '../utils/router.js';
 export async function renderClientForm(container, { id, onSaved } = {}) {
   const client = id ? await getClient(id) : {};
   if (id && !client) {
-    container.innerHTML = `<div class="empty-state">Cliente introuvable.</div>`;
+    container.innerHTML = `<div class="empty-state">Client introuvable.</div>`;
     return;
   }
 
   container.innerHTML = `
-    <h1>${id ? 'Modifier la cliente' : 'Nouvelle cliente'}</h1>
+    <h1>${id ? 'Modifier le client' : 'Nouveau client'}</h1>
     <form id="client-form">
       <div class="field-row">
         <div>
@@ -58,7 +58,7 @@ export async function renderClientForm(container, { id, onSaved } = {}) {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     const saved = await saveClient({ ...client, ...data });
-    showToast('Cliente enregistrée', 'success');
+    showToast('Client enregistrée', 'success');
     if (onSaved) {
       onSaved(saved);
     } else {

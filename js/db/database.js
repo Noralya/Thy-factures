@@ -1,7 +1,7 @@
 // database.js
 // Thin wrapper around IndexedDB. All data stays on-device, nothing is sent anywhere.
 
-const DB_NAME = 'thy-invoicing-db';
+const DB_NAME = 'invoicing-db';
 const DB_VERSION = 1;
 
 const STORES = {

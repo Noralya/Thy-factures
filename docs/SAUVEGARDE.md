@@ -11,7 +11,7 @@ ou de faire une mise à jour majeure d'iOS.
    indispensable pour restaurer la sauvegarde, et personne — y compris le
    développeur — ne peut le récupérer si vous l'oubliez).
 3. Appuyez sur **Exporter une sauvegarde chiffrée**.
-4. Un fichier `sauvegarde-factures-thy-AAAA-MM-JJ.json` est proposé à
+4. Un fichier `sauvegarde-factures-AAAA-MM-JJ.json` est proposé à
    l'enregistrement (par exemple dans l'application Fichiers, sur iCloud
    Drive, ou tout autre emplacement de votre choix).
 

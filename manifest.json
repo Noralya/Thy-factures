@@ -1,6 +1,6 @@
 {
-  "name": "Factures Thy",
-  "short_name": "Factures Thy",
+  "name": "Factures",
+  "short_name": "Factures",
   "description": "Application de facturation locale pour prothésiste ongulaire indépendante",
   "start_url": "./index.html",
   "scope": "./",

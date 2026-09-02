@@ -2,7 +2,7 @@
 // Caches the app shell so the PWA works fully offline after the first load.
 // This worker never talks to any server except to fetch these static files.
 
-const CACHE_NAME = 'thy-invoicing-cache-v1';
+const CACHE_NAME = 'invoicing-cache-v1';
 
 const APP_SHELL = [
   './',

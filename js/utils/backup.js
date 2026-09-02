@@ -9,7 +9,7 @@ import DB from '../db/database.js';
 const PBKDF2_ITERATIONS = 250000;
 const SALT_LENGTH = 16;
 const IV_LENGTH = 12;
-const FILE_MAGIC = 'THY-BACKUP-V1';
+const FILE_MAGIC = 'BACKUP-V1';
 
 async function deriveKey(password, salt) {
   const enc = new TextEncoder();

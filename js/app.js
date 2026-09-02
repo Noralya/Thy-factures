@@ -10,6 +10,7 @@ import { renderInvoiceForm } from './views/invoiceForm.js';
 import { renderInvoicePreview } from './views/invoicePreview.js';
 import { renderSettings } from './views/settings.js';
 import { showToast } from './utils/toast.js';
+import { renderIcons } from './utils/icons.js';
 
 const app = document.getElementById('app');
 
@@ -29,32 +30,55 @@ addRoute('/settings', () => renderSettings(app));
 
 function updateActiveNav() {
   const path = currentPath();
+
   document.querySelectorAll('.nav-item').forEach((link) => {
     const route = link.dataset.route;
-    const isActive = route === '/' ? path === '/' : path.startsWith(route) && route !== '/invoices/new' ? path.startsWith(route) : path === route;
-    link.classList.toggle('active', route === '/' ? path === '/' : path.startsWith(route));
+
+    const isActive =
+      route === '/'
+        ? path === '/'
+        : route === '/invoices/new'
+          ? path === route
+          : path.startsWith(route);
+
+    link.classList.toggle('active', isActive);
   });
 }
 
 async function onNavigate() {
   app.scrollTo?.(0, 0);
   window.scrollTo(0, 0);
+
   try {
     const handled = await resolveRoute();
-    if (handled === null && !document.querySelector('#app').innerHTML) {
-      app.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🤷‍♀️</div><div>Page introuvable</div></div>`;
+
+    if (handled === null && !app.innerHTML) {
+      app.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-state-icon">
+            <span data-icon="circleHelp"></span>
+          </div>
+          <div>Page introuvable</div>
+        </div>
+      `;
     }
+
+    // Les vues sont rendues dynamiquement : on initialise
+    // les icônes après chaque changement de page.
+    renderIcons(app);
+
   } catch (err) {
     console.error(err);
     showToast('Une erreur est survenue.', 'error');
   }
+
   updateActiveNav();
 }
 
+renderIcons(document);
 startRouter(onNavigate);
 
-// Register the service worker for offline support. Registration itself only
-// touches files bundled with the app - no client or invoice data is involved.
+// Register the service worker for offline support.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('service-worker.js').catch((err) => {

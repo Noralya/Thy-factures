@@ -5,13 +5,13 @@ Aucun compte Apple Developer ni App Store n'est nécessaire.
 1. Sur l'iPhone, ouvrez **Safari** (l'installation ne fonctionne qu'avec
    Safari, pas avec Chrome ou un autre navigateur).
 2. Rendez-vous à l'adresse de l'application (fournie par le développeur,
-   de la forme `https://VOTRE-COMPTE.github.io/factures-thy/`).
+   de la forme `https://VOTRE-COMPTE.github.io/factures/`).
 3. Appuyez sur le bouton de partage (icône carrée avec une flèche vers le
    haut, en bas de l'écran).
 4. Faites défiler et appuyez sur **« Sur l'écran d'accueil »**.
 5. Confirmez en appuyant sur **« Ajouter »** en haut à droite.
 
-Une icône **« Factures Thy »** apparaît alors sur l'écran d'accueil. En
+Une icône **« Factures »** apparaît alors sur l'écran d'accueil. En
 l'ouvrant, l'application se lance en plein écran, comme une application
 classique — sans la barre d'adresse de Safari.
 

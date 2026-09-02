@@ -1,10 +1,8 @@
-# Factures Thy — Application de facturation locale
-
-Application de facturation pour Thy, prothésiste ongulaire indépendante.
+# Application de facturation locale
 
 C'est une **PWA (Progressive Web App)** : pas de compte, pas de serveur applicatif,
 pas d'abonnement. Toutes les données (clientes, prestations, factures, sauvegardes)
-restent **exclusivement sur le téléphone de Thy**, stockées dans IndexedDB. Le PDF
+restent **exclusivement sur le téléphone**, stockées dans IndexedDB. Le PDF
 des factures est généré localement, sur l'appareil, sans jamais transiter par
 Internet.
 
@@ -43,7 +41,7 @@ service tiers.
 - Génération de PDF au format A4, entièrement locale
 - Partage natif du PDF (feuille de partage iOS : e-mail, messages, etc.)
 - Fonctionnement 100% hors ligne après le premier chargement
-- Sauvegarde chiffrée (mot de passe choisi par Thy) exportable/importable
+- Sauvegarde chiffrée (mot de passe choisi) exportable/importable
 
 ## Architecture technique
 
@@ -60,10 +58,9 @@ données, aucun système d'authentification, aucun tracking, aucune publicité.
 
 ## Confidentialité et sécurité
 
-- Toutes les données sont stockées uniquement dans IndexedDB, sur l'appareil
-  de Thy.
+- Toutes les données sont stockées uniquement dans IndexedDB.
 - Les sauvegardes exportées sont chiffrées avec AES-GCM ; la clé est dérivée
-  du mot de passe choisi par Thy via PBKDF2 (250 000 itérations). Le mot de
+  du mot de passe choisi via PBKDF2 (250 000 itérations). Le mot de
   passe n'est jamais stocké, ni par l'application, ni par le développeur : il
   n'existe aucun moyen de récupérer une sauvegarde sans lui.
 - Aucune requête réseau n'est effectuée pour lire ou écrire des données
